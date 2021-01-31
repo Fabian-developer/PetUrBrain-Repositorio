@@ -3,7 +3,6 @@ import 'tela_escolha.dart';
 import 'animal.dart';
 import 'cards.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
