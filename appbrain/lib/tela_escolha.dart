@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
-import 'animal.dart';
-import 'cards.dart';
-import 'lista_animais.dart';
+part of 'main.dart';
 
 class EscolhaPet extends StatelessWidget {
+  EscolhaPet(this.bloc);
+
+  final BlocHome bloc;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +21,13 @@ class EscolhaPet extends StatelessWidget {
               children: [
                 Container(
                   child: Column(
-                    children: lista.map((x) {
-                      return Cards(x);
-                    }).toList(),
+                    children: [
+                      for (Animal animal in bloc.animals)
+                        Cards(
+                          bloc,
+                          animal: animal,
+                        ),
+                    ],
                   ),
                 )
               ],

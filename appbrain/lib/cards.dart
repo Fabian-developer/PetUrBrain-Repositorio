@@ -1,10 +1,13 @@
-import 'package:flutter/material.dart';
-import 'animal.dart';
+part of 'main.dart';
 
 class Cards extends StatelessWidget {
-  final Animal animal;
+  Cards(
+    this.bloc, {
+    this.animal,
+  });
 
-  Cards(this.animal);
+  final Animal animal;
+  final BlocHome bloc;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +34,10 @@ class Cards extends StatelessWidget {
               'Escolher esse!',
               style: TextStyle(color: Colors.white),
             ),
-            onPressed: () {},
+            onPressed: () {
+              bloc.setAnimal(bloc.animals.indexOf(animal));
+              Navigator.pop(context);
+            },
           )
         ],
       ),
