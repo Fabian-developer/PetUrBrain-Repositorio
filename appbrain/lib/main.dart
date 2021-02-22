@@ -88,17 +88,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.network(
-                      bloc.animals[bloc.cAnimal].imageUrl,
-                      height: 300,
-                      width: 350,
-                    ),
                     Text(
-                      bloc.animals[bloc.cAnimal].nome,
+                      'Faça seu Pet evoluir!',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 28,
                         color: Colors.purple,
                       ),
+                    ),
+                    Text(
+                      'Nível 1',
+                      style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.orange,
+                      ),
+                    ),
+                    Image.network(
+                      bloc.animals[bloc.cAnimal].imageUrl,
+                      height: 400,
+                      width: 550,
+                    ),
+                    RaisedButton(
+                      color: Colors.green,
+                      child: Text(
+                        'Iniciar hora de estudo',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
