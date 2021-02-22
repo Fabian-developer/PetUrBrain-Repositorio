@@ -24,7 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   bloc_pattern: ^2.5.1
+  circular_countdown_timer: ^0.1.0
   cupertino_icons: ^1.0.0
+  flutter_animation_progress_bar: ^1.0.6
 
 dev_dependencies:
   flutter_test:

@@ -1,8 +1,10 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 import 'model/Animal.dart';
 
 import 'bloc/Home.dart';
+import 'view/timer/main.dart';
 
 part 'cards.dart';
 part 'tela_escolha.dart';
@@ -17,6 +19,9 @@ class MyApp extends StatelessWidget {
         Bloc<BlocHome>((dynamic i) => BlocHome()),
       ],
       child: MaterialApp(
+        routes: {
+          '/timer': (BuildContext context) => Timer(),
+        },
         title: 'PetUrBrain',
         theme: ThemeData(
           primarySwatch: Colors.purple,
@@ -95,17 +100,46 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.purple,
                       ),
                     ),
-                    Text(
-                      'Nível 1',
-                      style: TextStyle(
-                        fontSize: 28,
-                        color: Colors.orange,
-                      ),
-                    ),
                     Image.network(
-                      bloc.animals[bloc.cAnimal].imageUrl,
+                      bloc.getImage(),
                       height: 400,
                       width: 550,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 10,
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Lv ' +
+                                (bloc.getLevel() +
+                                        (bloc.getCValue() >= bloc.getMaxValue()
+                                            ? 1
+                                            : 0))
+                                    .toString(),
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Colors.orange,
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: SizedBox(
+                              height: 25,
+                              child: FAProgressBar(
+                                animatedDuration: Duration(milliseconds: 500),
+                                borderRadius: 5,
+                                currentValue: bloc.getCValue(),
+                                maxValue: bloc.getMaxValue(),
+                                progressColor: Colors.orange,
+                                backgroundColor: Colors.orange[200],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     RaisedButton(
                       color: Colors.green,
@@ -113,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         'Iniciar hora de estudo',
                         style: TextStyle(color: Colors.white),
                       ),
-                      onPressed: () {},
+                      onPressed: () => Navigator.pushNamed(context, '/timer'),
                     ),
                   ],
                 ),

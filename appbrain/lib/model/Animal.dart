@@ -1,17 +1,20 @@
 class Animal {
+  int points = 0;
+
+  List<String> images;
+
   Object saude;
 
   String
       //
       estado,
       id,
-      imageUrl,
       nome;
 
   Animal({
     this.estado,
     this.id,
-    this.imageUrl,
+    this.images,
     this.nome,
     this.saude,
   });

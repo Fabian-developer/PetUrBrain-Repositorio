@@ -17,7 +17,7 @@ class Cards extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.network(
-            animal.imageUrl,
+            animal.images[0],
             height: 300,
             width: 350,
           ),
