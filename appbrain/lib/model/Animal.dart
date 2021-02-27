@@ -1,5 +1,5 @@
 class Animal {
-  int points = 0;
+  int cost = 0, points = 0;
 
   List<String> images;
 
@@ -12,10 +12,12 @@ class Animal {
       nome;
 
   Animal({
+    this.cost,
     this.estado,
     this.id,
     this.images,
     this.nome,
+    this.points,
     this.saude,
   });
 }

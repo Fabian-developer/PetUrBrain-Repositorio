@@ -1,10 +1,11 @@
 import 'dart:math';
 
+import 'package:appbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../model/Animal.dart';
 
-const int POINTS_TIMER = 10;
+const int POINTS_TIMER = 10, PETCOINS_TIMER = 5;
 
 const List<int> LEVELS = [
   0,
@@ -28,6 +29,7 @@ class BlocHome extends BlocBase {
         'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
         'https://previews.123rf.com/images/refluo/refluo1511/refluo151100004/48258373-cartoon-ferret.jpg',
       ],
+      points: 0,
     ),
     Animal(
       id: 'a2',
@@ -37,6 +39,7 @@ class BlocHome extends BlocBase {
       images: [
         'https://image.shutterstock.com/image-vector/cat-grey-cartoon-pet-isolated-260nw-1512744293.jpg',
       ],
+      points: 0,
     ),
     Animal(
       id: 'a3',
@@ -46,6 +49,7 @@ class BlocHome extends BlocBase {
       images: [
         'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
       ],
+      points: 0,
     ),
     Animal(
       id: 'a4',
@@ -55,34 +59,37 @@ class BlocHome extends BlocBase {
       images: [
         'https://previews.123rf.com/images/refluo/refluo1511/refluo151100004/48258373-cartoon-ferret.jpg',
       ],
+      points: 0,
     ),
   ];
 
-  int cAnimal = -1;
+  int cAnimal = 0;
 
   void addPoints({
     int value = POINTS_TIMER,
   }) {
-    animals[cAnimal].points += value;
+    cUser.addAnimalPoints(cAnimal, value, PETCOINS_TIMER);
     notifyListeners();
   }
 
   int getCValue() {
-    if (getLevel() == 0) return animals[cAnimal].points;
-    return animals[cAnimal].points - LEVELS[getLevel()];
+    if (getLevel() == 0) return cUser.animals[cAnimal].points;
+    return cUser.animals[cAnimal].points - LEVELS[getLevel()];
   }
 
-  String getImage() => animals[cAnimal].images[min(
+  String getImage() => cUser.animals[cAnimal].images[min(
         getLevel(),
-        animals[cAnimal].images.length,
+        cUser.animals[cAnimal].images.length,
       )];
 
-  int getLevel() =>
-      LEVELS.length -
-      1 -
-      LEVELS.reversed.toList().indexWhere(
-            (e) => animals[cAnimal].points >= e,
-          );
+  int getLevel() {
+    print(cUser.animals[cAnimal].points);
+    return LEVELS.length -
+        1 -
+        LEVELS.reversed.toList().indexWhere(
+              (e) => cUser.animals[cAnimal].points >= e,
+            );
+  }
 
   int getMaxValue() {
     if (getLevel() == 0)
@@ -92,9 +99,9 @@ class BlocHome extends BlocBase {
   }
 
   void setAnimal(int value) {
-    if (cAnimal != value) {
-      cAnimal = value;
-      notifyListeners();
-    }
+    cUser.addAnimal(animals[value]);
+
+    cAnimal = cUser.animals.indexOf(animals[value]);
+    notifyListeners();
   }
 }

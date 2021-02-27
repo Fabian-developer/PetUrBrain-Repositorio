@@ -36,7 +36,7 @@ class Cards extends StatelessWidget {
             ),
             onPressed: () {
               bloc.setAnimal(bloc.animals.indexOf(animal));
-              Navigator.pop(context);
+              FunctionCache.redirectTo('/home');
             },
           )
         ],
