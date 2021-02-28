@@ -79,11 +79,10 @@ class BlocHome extends BlocBase {
 
   String getImage() => cUser.animals[cAnimal].images[min(
         getLevel(),
-        cUser.animals[cAnimal].images.length,
+        cUser.animals[cAnimal].images.length - 1,
       )];
 
   int getLevel() {
-    print(cUser.animals[cAnimal].points);
     return LEVELS.length -
         1 -
         LEVELS.reversed.toList().indexWhere(
