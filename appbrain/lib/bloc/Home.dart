@@ -5,7 +5,11 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../model/Animal.dart';
 
-const int POINTS_TIMER = 10, PETCOINS_TIMER = 5;
+const int
+    //
+    MAX_PETS = 8,
+    PETCOINS_TIMER = 5,
+    POINTS_TIMER = 10;
 
 const List<int> LEVELS = [
   0,
@@ -17,8 +21,8 @@ const List<int> LEVELS = [
 ];
 
 class BlocHome extends BlocBase {
-  List<Animal> animals = [
-    Animal(
+  List<ModelAnimal> animals = [
+    ModelAnimal(
       id: 'a1',
       nome: 'Cachorro',
       saude: 90,
@@ -31,7 +35,7 @@ class BlocHome extends BlocBase {
       ],
       points: 0,
     ),
-    Animal(
+    ModelAnimal(
       id: 'a2',
       nome: 'Gato',
       saude: 90,
@@ -41,7 +45,7 @@ class BlocHome extends BlocBase {
       ],
       points: 0,
     ),
-    Animal(
+    ModelAnimal(
       id: 'a3',
       nome: 'Coruja',
       saude: 90,
@@ -51,7 +55,7 @@ class BlocHome extends BlocBase {
       ],
       points: 0,
     ),
-    Animal(
+    ModelAnimal(
       id: 'a4',
       nome: 'Furão',
       saude: 90,
@@ -65,6 +69,17 @@ class BlocHome extends BlocBase {
 
   int cAnimal = 0;
 
+  bool addAnimal(int value) {
+    if (cUser.animals.length >= MAX_PETS) return false;
+
+    cUser.addAnimal(animals[value]);
+
+    cAnimal = cUser.animals.indexOf(animals[value]);
+    notifyListeners();
+
+    return true;
+  }
+
   void addPoints({
     int value = POINTS_TIMER,
   }) {
@@ -77,16 +92,16 @@ class BlocHome extends BlocBase {
     return cUser.animals[cAnimal].points - LEVELS[getLevel()];
   }
 
-  String getImage() => cUser.animals[cAnimal].images[min(
-        getLevel(),
-        cUser.animals[cAnimal].images.length - 1,
+  String getImage({int index}) => cUser.animals[index ?? cAnimal].images[min(
+        getLevel(index: index),
+        cUser.animals[index ?? cAnimal].images.length - 1,
       )];
 
-  int getLevel() {
+  int getLevel({int index}) {
     return LEVELS.length -
         1 -
         LEVELS.reversed.toList().indexWhere(
-              (e) => cUser.animals[cAnimal].points >= e,
+              (e) => cUser.animals[index ?? cAnimal].points >= e,
             );
   }
 
@@ -98,9 +113,9 @@ class BlocHome extends BlocBase {
   }
 
   void setAnimal(int value) {
-    cUser.addAnimal(animals[value]);
-
-    cAnimal = cUser.animals.indexOf(animals[value]);
-    notifyListeners();
+    if (cAnimal != value) {
+      cAnimal = value;
+      notifyListeners();
+    }
   }
 }

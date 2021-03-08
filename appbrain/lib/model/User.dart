@@ -10,7 +10,7 @@ class ModelUser {
   ModelUser.fromJson(Map<String, dynamic> json)
       : this.animals = json['animals']
             .cast<Map<String, dynamic>>()
-            .map((Map<String, dynamic> e) => Animal(
+            .map((Map<String, dynamic> e) => ModelAnimal(
                   cost: e['cost'],
                   estado: e['estado'],
                   id: e['id'],
@@ -20,13 +20,13 @@ class ModelUser {
                   saude: e['saude'],
                 ))
             .toList()
-            .cast<Animal>(),
+            .cast<ModelAnimal>(),
         this.petCoins = json['petCoins'];
 
   int petCoins;
-  List<Animal> animals;
+  List<ModelAnimal> animals;
 
-  void addAnimal(Animal animal) {
+  void addAnimal(ModelAnimal animal) {
     if (animals.contains(animal)) return;
 
     animals.add(animal);

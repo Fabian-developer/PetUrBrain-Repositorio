@@ -15,7 +15,7 @@ class _RouterState extends State<Router> {
     String _value = await FunctionCache.getRedirect(), navigator = '';
 
     if (_value == null) {
-      navigator = '/choose';
+      navigator = '/intro';
     } else {
       final String _data = json.decode(_value).toString();
       navigator = _data;

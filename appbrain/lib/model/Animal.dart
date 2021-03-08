@@ -1,4 +1,4 @@
-class Animal {
+class ModelAnimal {
   int cost = 0, points = 0;
 
   List<String> images;
@@ -11,7 +11,7 @@ class Animal {
       id,
       nome;
 
-  Animal({
+  ModelAnimal({
     this.cost,
     this.estado,
     this.id,
