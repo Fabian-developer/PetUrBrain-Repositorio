@@ -70,7 +70,12 @@ class BlocHome extends BlocBase {
   int cAnimal = 0;
 
   bool addAnimal(int value) {
-    if (cUser.animals.length >= MAX_PETS) return false;
+    print(animals[value].cost);
+    if (cUser.animals.length >= MAX_PETS ||
+        (cUser.animals.length > 0 && cUser.petCoins < animals[value].cost))
+      return false;
+
+    if (cUser.animals.length > 0) cUser.petCoins -= animals[value].cost;
 
     cUser.addAnimal(animals[value]);
 

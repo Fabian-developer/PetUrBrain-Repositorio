@@ -1,5 +1,10 @@
+const int DEFAULT_COST = 10;
+
 class ModelAnimal {
-  int cost = 0, points = 0;
+  int
+      //
+      cost,
+      points;
 
   List<String> images;
 
@@ -19,5 +24,8 @@ class ModelAnimal {
     this.nome,
     this.points,
     this.saude,
-  });
+  }) {
+    this.cost = this.cost ?? DEFAULT_COST;
+    this.points = this.points ?? 0;
+  }
 }

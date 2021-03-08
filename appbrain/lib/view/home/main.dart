@@ -42,6 +42,17 @@ class Home extends StatelessWidget {
                   Navigator.pushNamed(context, '/myPets');
                 },
               ),
+              TextButton(
+                child: Row(
+                  children: [
+                    Text('Adicionar pets'),
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/choose');
+                },
+              ),
             ],
           ),
         ),
