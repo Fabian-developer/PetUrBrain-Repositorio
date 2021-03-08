@@ -24,6 +24,13 @@ class _TimerState extends State<Timer> {
   }
 
   @override
+  void dispose() {
+    if (player.playing) player.stop();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
