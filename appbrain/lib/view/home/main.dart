@@ -28,7 +28,23 @@ class Home extends StatelessWidget {
             'PetUrBrain',
           ),
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              TextButton(
+                child: Row(
+                  children: [
+                    Text('Meus Pets'),
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/myPets');
+                },
+              ),
+            ],
+          ),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

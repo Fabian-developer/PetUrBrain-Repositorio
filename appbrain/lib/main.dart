@@ -1,10 +1,12 @@
-import 'package:appbrain/view/choose/main.dart';
-import 'package:appbrain/view/home/main.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart' hide Router;
 import 'package:one_context/one_context.dart';
 
 import 'bloc/Home.dart';
+import 'view/choose/main.dart';
+import 'view/home/main.dart';
+import 'view/intro/main.dart';
+import 'view/myPets/main.dart';
 import 'view/timer/main.dart';
 import 'view/router/main.dart';
 
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
         navigatorKey: OneContext().key,
         routes: {
           '/choose': (BuildContext context) => Choose(),
+          '/intro': (BuildContext context) => Intro(),
           '/home': (BuildContext context) => Home(),
+          '/myPets': (BuildContext context) => MyPets(),
           '/timer': (BuildContext context) => Timer(),
         },
         title: 'PetUrBrain',

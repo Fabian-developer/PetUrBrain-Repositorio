@@ -6,7 +6,7 @@ class Cards extends StatelessWidget {
     this.animal,
   });
 
-  final Animal animal;
+  final ModelAnimal animal;
   final BlocHome bloc;
 
   @override
@@ -35,7 +35,7 @@ class Cards extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onPressed: () {
-              bloc.setAnimal(bloc.animals.indexOf(animal));
+              bloc.addAnimal(bloc.animals.indexOf(animal));
               FunctionCache.redirectTo('/home');
             },
           )
