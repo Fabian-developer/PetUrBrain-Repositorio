@@ -31,7 +31,9 @@ class Cards extends StatelessWidget {
           RaisedButton(
             color: Colors.purple,
             child: Text(
-              'Escolher esse!',
+              cUser.animals.length > 0
+                  ? animal.cost.toString()
+                  : 'Escolher esse!',
               style: TextStyle(color: Colors.white),
             ),
             onPressed: () {
