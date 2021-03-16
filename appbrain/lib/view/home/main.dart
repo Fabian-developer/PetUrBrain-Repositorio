@@ -3,6 +3,7 @@ import 'package:appbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -34,7 +35,7 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text('Meus Pets'),
+                    Text(translator.translate('home01')),
                   ],
                 ),
                 onPressed: () {
@@ -45,13 +46,46 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text('Adicionar pets'),
+                    Text(translator.translate('home02')),
                   ],
                 ),
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/choose');
                 },
+              ),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  translator.translate('locale'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: DropdownButton<String>(
+                  items: List.generate(
+                    translator.locals().length,
+                    (index) => DropdownMenuItem(
+                      child: Text(translator
+                          .locals()
+                          .toList()[index]
+                          .languageCode
+                          .toUpperCase()),
+                      value: translator.locals().toList()[index].languageCode,
+                    ),
+                  ),
+                  onChanged: (value) {
+                    translator.setNewLanguage(
+                      context,
+                      newLanguage: value,
+                      remember: true,
+                      restart: true,
+                    );
+                    Navigator.pop(context);
+                  },
+                  value: translator.locale.languageCode,
+                ),
               ),
             ],
           ),
@@ -61,7 +95,7 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Faça seu Pet evoluir!',
+                translator.translate('home03'),
                 style: TextStyle(
                   fontSize: 28,
                   color: Colors.purple,
@@ -111,7 +145,7 @@ class Home extends StatelessWidget {
               RaisedButton(
                 color: Colors.green,
                 child: Text(
-                  'Iniciar hora de estudo',
+                  translator.translate('home04'),
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () => Navigator.pushNamed(context, '/timer'),

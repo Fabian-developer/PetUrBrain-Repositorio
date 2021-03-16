@@ -40,7 +40,7 @@ class ListCard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Escolher'),
+                  Text(translator.translate('myPets01')),
                 ],
               ),
               onPressed: () {

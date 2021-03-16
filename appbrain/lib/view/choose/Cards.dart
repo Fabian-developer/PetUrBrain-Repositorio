@@ -33,7 +33,7 @@ class Cards extends StatelessWidget {
             child: Text(
               cUser.animals.length > 0
                   ? animal.cost.toString()
-                  : 'Escolher esse!',
+                  : translator.translate('choose01'),
               style: TextStyle(color: Colors.white),
             ),
             onPressed: () {

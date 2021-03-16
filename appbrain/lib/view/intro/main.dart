@@ -1,6 +1,7 @@
 import 'package:appbrain/bloc/Home.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 class Intro extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class Intro extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                'Você precisa escolher seu Pet!',
+                translator.translate('intro01'),
                 style: TextStyle(
                   fontSize: 28,
                   color: Colors.purple,
@@ -34,7 +35,7 @@ class Intro extends StatelessWidget {
                   },
                   color: Colors.purple,
                   child: Text(
-                    'Escolher!',
+                    translator.translate('intro02'),
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
