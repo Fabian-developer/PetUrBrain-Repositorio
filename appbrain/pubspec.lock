@@ -7,10 +7,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
     version: "2.5.0-nullsafety.3"
-=======
-    version: "2.5.0-nullsafety.1"
   audio_session:
     dependency: transitive
     description:
@@ -18,7 +15,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.11"
->>>>>>> fb79c09b542b6188a57648390a079e33d186a61a
   bloc_pattern:
     dependency: "direct main"
     description:
@@ -67,10 +63,7 @@ packages:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
     version: "1.15.0-nullsafety.5"
-=======
-    version: "1.15.0-nullsafety.3"
   convert:
     dependency: transitive
     description:
@@ -85,7 +78,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.5"
->>>>>>> fb79c09b542b6188a57648390a079e33d186a61a
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -143,7 +135,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.16.1"
-<<<<<<< HEAD
   js:
     dependency: transitive
     description:
@@ -151,7 +142,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3-nullsafety.3"
-=======
   just_audio:
     dependency: "direct main"
     description:
@@ -173,7 +163,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.3"
->>>>>>> fb79c09b542b6188a57648390a079e33d186a61a
   matcher:
     dependency: transitive
     description:
@@ -360,10 +349,7 @@ packages:
       name: typed_data
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
     version: "1.3.0-nullsafety.5"
-=======
-    version: "1.3.0-nullsafety.3"
   uuid:
     dependency: transitive
     description:
@@ -371,7 +357,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.2"
->>>>>>> fb79c09b542b6188a57648390a079e33d186a61a
   vector_math:
     dependency: transitive
     description:
