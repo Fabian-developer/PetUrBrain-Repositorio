@@ -28,6 +28,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_animation_progress_bar: ^1.0.6
   just_audio: 0.6.15+1
+  localize_and_translate: ^3.0.3
   one_context: ^0.4.0
   path_provider: ^1.6.18
 
@@ -48,6 +49,8 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/assets/locale/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

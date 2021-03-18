@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../../utility/Pointer.dart';
 
@@ -34,7 +35,7 @@ class _TimerState extends State<Timer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hora de estudos'),
+        title: Text(translator.translate('timer01')),
       ),
       body: Center(
         child: CircularCountDownTimer(
@@ -62,7 +63,7 @@ class _TimerState extends State<Timer> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Iniciar/Parar som da chuva'),
+              Text(translator.translate('timer02')),
             ],
           ),
           onPressed: () {

@@ -1,5 +1,6 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../../bloc/Home.dart';
 import '../../utility/Pointer.dart';
@@ -12,7 +13,7 @@ class MyPets extends StatelessWidget {
     return Consumer<BlocHome>(builder: (context, bloc) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Meus Pets'),
+          title: Text(translator.translate('myPets02')),
         ),
         body: GridView.count(
           crossAxisCount: 2,
