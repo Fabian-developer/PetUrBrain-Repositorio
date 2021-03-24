@@ -8,7 +8,7 @@ class Intro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<BlocHome>(builder: (context, bloc) {
       return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).accentColor,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -17,7 +17,7 @@ class Intro extends StatelessWidget {
                 translator.translate('intro01'),
                 style: TextStyle(
                   fontSize: 28,
-                  color: Colors.purple,
+                  color: Theme.of(context).colorScheme.primaryVariant,
                 ),
               ),
               Image.network(
@@ -26,19 +26,21 @@ class Intro extends StatelessWidget {
               Container(
                 height: 50,
                 width: 300,
-                child: RaisedButton(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Theme.of(context).colorScheme.primaryVariant,
+                  ),
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
                       '/choose',
                     );
                   },
-                  color: Colors.purple,
                   child: Text(
                     translator.translate('intro02'),
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Theme.of(context).accentColor,
                     ),
                   ),
                 ),

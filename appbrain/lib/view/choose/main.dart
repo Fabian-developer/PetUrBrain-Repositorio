@@ -18,7 +18,7 @@ class Choose extends StatelessWidget {
           title: Text('PetUrBrain'),
         ),
         body: Container(
-          color: Colors.purple[100],
+          color: Theme.of(context).colorScheme.primary,
           child: SingleChildScrollView(
             child: Center(
               child: Column(

@@ -40,10 +40,12 @@ class _RouterState extends State<Router> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).accentColor,
       body: Center(
         child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
+          valueColor: AlwaysStoppedAnimation<Color>(
+            Theme.of(context).colorScheme.secondaryVariant,
+          ),
         ),
       ),
     );

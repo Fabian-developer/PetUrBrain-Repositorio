@@ -4,6 +4,7 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:one_context/one_context.dart';
 
 import 'bloc/Home.dart';
+import 'utility/CustomTheme.dart';
 import 'view/choose/main.dart';
 import 'view/home/main.dart';
 import 'view/intro/main.dart';
@@ -45,9 +46,7 @@ class MyApp extends StatelessWidget {
             '/timer': (BuildContext context) => Timer(),
           },
           title: 'PetUrBrain',
-          theme: ThemeData(
-            primarySwatch: Colors.purple,
-          ),
+          theme: CustomTheme.light,
           home: Router(),
         ),
       ),

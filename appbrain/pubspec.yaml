@@ -24,13 +24,13 @@ dependencies:
   flutter:
     sdk: flutter
   bloc_pattern: ^2.5.1
-  circular_countdown_timer: ^0.1.0
-  cupertino_icons: ^1.0.0
-  flutter_animation_progress_bar: ^1.0.6
-  just_audio: 0.6.15+1
-  localize_and_translate: ^3.0.3
-  one_context: ^0.4.0
-  path_provider: ^1.6.18
+  circular_countdown_timer: ^0.2.0
+  cupertino_icons: ^1.0.2
+  flutter_animation_progress_bar: ^2.0.0
+  just_audio: ^0.7.2
+  localize_and_translate: ^4.0.1
+  one_context: ^1.0.0
+  path_provider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
