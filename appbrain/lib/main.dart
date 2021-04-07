@@ -1,4 +1,5 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart' hide Router;
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:one_context/one_context.dart';
@@ -20,6 +21,8 @@ void main() async {
     languagesList: ['en', 'pt'],
     assetsDirectory: 'lib/assets/locale/',
   );
+
+  await Firebase.initializeApp();
 
   runApp(MyApp());
 }

@@ -1,4 +1,4 @@
-import 'package:appbrain/model/User.dart';
+import 'package:peturbrain/model/User.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../bloc/Home.dart';
