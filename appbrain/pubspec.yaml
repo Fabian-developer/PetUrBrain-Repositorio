@@ -27,7 +27,7 @@ dependencies:
   circular_countdown_timer: ^0.2.0
   cupertino_icons: ^1.0.2
   firebase_core: ^1.0.2
-  firebase_remote_config: ^0.9.0-dev.0
+  firebase_remote_config: ^0.9.0-dev.2
   flutter_animation_progress_bar: ^2.0.0
   just_audio: ^0.7.2
   localize_and_translate: ^4.0.1

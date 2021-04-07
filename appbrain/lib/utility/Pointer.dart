@@ -6,3 +6,5 @@ import '../bloc/Home.dart';
 ModelUser cUser;
 
 final BlocHome blocHome = BlocProvider.getBloc<BlocHome>();
+
+Map<String, dynamic> config;
