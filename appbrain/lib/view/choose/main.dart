@@ -1,4 +1,4 @@
-import 'package:appbrain/utility/Pointer.dart';
+import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
@@ -18,7 +18,7 @@ class Choose extends StatelessWidget {
           title: Text('PetUrBrain'),
         ),
         body: Container(
-          color: Colors.purple[100],
+          color: Theme.of(context).colorScheme.primary,
           child: SingleChildScrollView(
             child: Center(
               child: Column(

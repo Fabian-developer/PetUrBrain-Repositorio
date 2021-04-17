@@ -1,5 +1,5 @@
-import 'package:appbrain/bloc/Home.dart';
-import 'package:appbrain/utility/Pointer.dart';
+import 'package:peturbrain/bloc/Home.dart';
+import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
@@ -35,7 +35,12 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(translator.translate('home01')),
+                    Text(
+                      translator.translate('home01'),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primaryVariant,
+                      ),
+                    ),
                   ],
                 ),
                 onPressed: () {
@@ -46,7 +51,12 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(translator.translate('home02')),
+                    Text(
+                      translator.translate('home02'),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primaryVariant,
+                      ),
+                    ),
                   ],
                 ),
                 onPressed: () {
@@ -98,7 +108,7 @@ class Home extends StatelessWidget {
                 translator.translate('home03'),
                 style: TextStyle(
                   fontSize: 28,
-                  color: Colors.purple,
+                  color: Theme.of(context).colorScheme.primaryVariant,
                 ),
               ),
               Image.network(
@@ -122,7 +132,7 @@ class Home extends StatelessWidget {
                               .toString(),
                       style: TextStyle(
                         fontSize: 22,
-                        color: Colors.orange,
+                        color: Theme.of(context).colorScheme.secondaryVariant,
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -131,22 +141,26 @@ class Home extends StatelessWidget {
                         height: 25,
                         child: FAProgressBar(
                           animatedDuration: Duration(milliseconds: 500),
-                          borderRadius: 5,
+                          borderRadius: BorderRadius.circular(5),
                           currentValue: bloc.getCValue(),
                           maxValue: bloc.getMaxValue(),
-                          progressColor: Colors.orange,
-                          backgroundColor: Colors.orange[200],
+                          progressColor:
+                              Theme.of(context).colorScheme.secondaryVariant,
+                          backgroundColor:
+                              Theme.of(context).colorScheme.secondary,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-              RaisedButton(
-                color: Colors.green,
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Theme.of(context).colorScheme.error,
+                ),
                 child: Text(
                   translator.translate('home04'),
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Theme.of(context).accentColor),
                 ),
                 onPressed: () => Navigator.pushNamed(context, '/timer'),
               ),

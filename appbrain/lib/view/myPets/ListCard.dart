@@ -20,7 +20,7 @@ class ListCard extends StatelessWidget {
             offset: Offset(2, 2),
           )
         ],
-        color: Colors.white,
+        color: Theme.of(context).accentColor,
       ),
       child: Column(
         children: [
@@ -32,7 +32,7 @@ class ListCard extends StatelessWidget {
             ),
           ),
           Divider(
-            color: Colors.purple,
+            color: Theme.of(context).colorScheme.primaryVariant,
             height: 0,
           ),
           Expanded(
@@ -40,7 +40,12 @@ class ListCard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(translator.translate('myPets01')),
+                  Text(
+                    translator.translate('myPets01'),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primaryVariant,
+                    ),
+                  ),
                 ],
               ),
               onPressed: () {

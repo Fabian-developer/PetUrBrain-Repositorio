@@ -12,7 +12,7 @@ class Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white,
+      color: Theme.of(context).accentColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -25,16 +25,18 @@ class Cards extends StatelessWidget {
             animal.nome,
             style: TextStyle(
               fontSize: 20,
-              color: Colors.purple,
+              color: Theme.of(context).colorScheme.primaryVariant,
             ),
           ),
-          RaisedButton(
-            color: Colors.purple,
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Theme.of(context).colorScheme.primaryVariant,
+            ),
             child: Text(
               cUser.animals.length > 0
                   ? animal.cost.toString()
                   : translator.translate('choose01'),
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Theme.of(context).accentColor),
             ),
             onPressed: () {
               bloc.addAnimal(bloc.animals.indexOf(animal));

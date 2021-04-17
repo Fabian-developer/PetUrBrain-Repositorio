@@ -41,12 +41,12 @@ class _TimerState extends State<Timer> {
         child: CircularCountDownTimer(
           autoStart: true,
           duration: TIMER_DURATION,
-          fillColor: Colors.purple[400],
+          fillColor: Theme.of(context).colorScheme.primaryVariant,
           height: MediaQuery.of(context).size.width * .75,
           isReverse: true,
           isReverseAnimation: false,
           isTimerTextShown: true,
-          ringColor: Colors.purple[200],
+          ringColor: Theme.of(context).colorScheme.primary,
           strokeCap: StrokeCap.round,
           strokeWidth: MediaQuery.of(context).size.width * .1,
           textStyle: TextStyle(fontSize: 32, fontWeight: FontWeight.w800),
@@ -59,7 +59,7 @@ class _TimerState extends State<Timer> {
       ),
       bottomSheet: Container(
         height: 50,
-        child: FlatButton(
+        child: TextButton(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

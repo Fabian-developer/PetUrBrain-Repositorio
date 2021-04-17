@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:appbrain/utility/Pointer.dart';
+import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../model/Animal.dart';
