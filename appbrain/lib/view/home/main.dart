@@ -1,3 +1,4 @@
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:peturbrain/bloc/Home.dart';
 import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
@@ -93,6 +94,7 @@ class Home extends StatelessWidget {
                       restart: true,
                     );
                     Navigator.pop(context);
+                    Phoenix.rebirth(context);
                   },
                   value: translator.locale.languageCode,
                 ),
