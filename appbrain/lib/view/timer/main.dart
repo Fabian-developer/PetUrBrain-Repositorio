@@ -63,7 +63,10 @@ class _TimerState extends State<Timer> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(translator.translate('timer02')),
+              Text(
+                translator.translate('timer02'),
+                style: TextStyle(color: Colors.purple),
+              ),
             ],
           ),
           onPressed: () {

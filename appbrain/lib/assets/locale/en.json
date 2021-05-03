@@ -5,10 +5,10 @@
     "home03": "Evolve your pet!",
     "home04": "Start study time",
     "intro01": "You need to choose your pet!",
-    "intro02": "null",
+    "intro02": "Select this one!",
     "locale": "Choose your language",
-    "myPets01": "null",
-    "myPets02": "null",
-    "timer01": "null",
-    "timer02": "null"
+    "myPets01": "Select this one",
+    "myPets02": "My Pets",
+    "timer01": "Study time",
+    "timer02": "Start/Stop the rain sound"
 }
