@@ -28,10 +28,10 @@ class BlocHome extends BlocBase {
       saude: 90,
       estado: 'bem',
       images: [
-        'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/119509859/original/a4b4d447d4d4223232912ba81768f00177de6565/do-animal-dog-cat-pet-illustration-cartoon-caricature.png',
-        'https://image.shutterstock.com/image-vector/cat-grey-cartoon-pet-isolated-260nw-1512744293.jpg',
-        'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
-        'https://previews.123rf.com/images/refluo/refluo1511/refluo151100004/48258373-cartoon-ferret.jpg',
+        'https://photos.google.com/share/AF1QipMLuRpSAvcShwj26HM4D6mar1sGgEA70iKXzbe202zkLa0VVdGu0Y8PR8qXKV-ORA/photo/AF1QipPKOTUk8WZBxszwMLNdYih3CK3G2juVZkqWFqY7?key=QnJWRm9CbnpLYWRlTFhyTHJ3c1Y0Nmw0Smk3ZTZ3',
+        'https://photos.google.com/share/AF1QipMLuRpSAvcShwj26HM4D6mar1sGgEA70iKXzbe202zkLa0VVdGu0Y8PR8qXKV-ORA/photo/AF1QipPKOTUk8WZBxszwMLNdYih3CK3G2juVZkqWFqY7?key=QnJWRm9CbnpLYWRlTFhyTHJ3c1Y0Nmw0Smk3ZTZ3',
+        'https://photos.google.com/share/AF1QipMLuRpSAvcShwj26HM4D6mar1sGgEA70iKXzbe202zkLa0VVdGu0Y8PR8qXKV-ORA/photo/AF1QipPKOTUk8WZBxszwMLNdYih3CK3G2juVZkqWFqY7?key=QnJWRm9CbnpLYWRlTFhyTHJ3c1Y0Nmw0Smk3ZTZ3',
+        'https://photos.google.com/share/AF1QipMLuRpSAvcShwj26HM4D6mar1sGgEA70iKXzbe202zkLa0VVdGu0Y8PR8qXKV-ORA/photo/AF1QipPKOTUk8WZBxszwMLNdYih3CK3G2juVZkqWFqY7?key=QnJWRm9CbnpLYWRlTFhyTHJ3c1Y0Nmw0Smk3ZTZ3',
       ],
       points: 0,
     ),
@@ -41,7 +41,37 @@ class BlocHome extends BlocBase {
       saude: 90,
       estado: 'bem',
       images: [
-        'https://image.shutterstock.com/image-vector/cat-grey-cartoon-pet-isolated-260nw-1512744293.jpg',
+        'https://lh3.googleusercontent.com/pw/ACtC-3dBBZkXsnZhspJAUf_TqlBe9x-UJdygPPK0nh9ySwW_-ktraZs2zznvEc2LyLdu9LokTkw7rSmEUD7dBexwCAoA2yvT7oF4bZVfJs0SFUw54v3FabwBAr4v3XDBPMRm-AYeXsGUhPvSpJxkzu6meTv7=w465-h600-no?authuser=0',
+      ],
+      points: 0,
+    ),
+    ModelAnimal(
+      id: 'a3',
+      nome: 'Coruja',
+      saude: 90,
+      estado: 'bem',
+      images: [
+        'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
+      ],
+      points: 0,
+    ),
+    ModelAnimal(
+      id: 'a3',
+      nome: 'Coruja',
+      saude: 90,
+      estado: 'bem',
+      images: [
+        'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
+      ],
+      points: 0,
+    ),
+    ModelAnimal(
+      id: 'a3',
+      nome: 'Coruja',
+      saude: 90,
+      estado: 'bem',
+      images: [
+        'https://img.pngio.com/owl-cartoon-images-stock-photos-vectors-shutterstock-cartoon-owl-260_280.jpg',
       ],
       points: 0,
     ),
