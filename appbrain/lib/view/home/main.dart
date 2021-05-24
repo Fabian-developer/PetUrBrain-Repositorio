@@ -14,14 +14,29 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           actions: [
             Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                  'PetCoins: ' + cUser.petCoins.toString(),
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.elliptical(100, 50)),
+                ),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'lib/assets/petcoin.png',
+                      height: 20,
+                    ),
+                    const SizedBox(width: 10),
+                    Text(
+                      cUser.petCoins.toString(),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -123,38 +138,44 @@ class Home extends StatelessWidget {
                   horizontal: 15,
                   vertical: 10,
                 ),
-                child: Row(
-                  children: [
-                    Text(
-                      'Lv ' +
-                          (bloc.getLevel() +
-                                  (bloc.getCValue() >= bloc.getMaxValue()
-                                      ? 1
-                                      : 0))
-                              .toString(),
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Theme.of(context).colorScheme.secondaryVariant,
+                child: bloc.getLevel() == 5
+                    ? Text('Parabéns! Seu pet chegou ao nível final!')
+                    : Row(
+                        children: [
+                          Text(
+                            'Lv ' +
+                                (bloc.getLevel() +
+                                        (bloc.getCValue() >= bloc.getMaxValue()
+                                            ? 1
+                                            : 0) +
+                                        1)
+                                    .toString(),
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .secondaryVariant,
+                            ),
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: SizedBox(
+                              height: 25,
+                              child: FAProgressBar(
+                                animatedDuration: Duration(milliseconds: 500),
+                                borderRadius: BorderRadius.circular(5),
+                                currentValue: bloc.getCValue(),
+                                maxValue: bloc.getMaxValue(),
+                                progressColor: Theme.of(context)
+                                    .colorScheme
+                                    .secondaryVariant,
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.secondary,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(width: 20),
-                    Expanded(
-                      child: SizedBox(
-                        height: 25,
-                        child: FAProgressBar(
-                          animatedDuration: Duration(milliseconds: 500),
-                          borderRadius: BorderRadius.circular(5),
-                          currentValue: bloc.getCValue(),
-                          maxValue: bloc.getMaxValue(),
-                          progressColor:
-                              Theme.of(context).colorScheme.secondaryVariant,
-                          backgroundColor:
-                              Theme.of(context).colorScheme.secondary,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
