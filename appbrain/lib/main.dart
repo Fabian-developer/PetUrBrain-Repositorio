@@ -8,10 +8,12 @@ import 'package:one_context/one_context.dart';
 import 'bloc/Home.dart';
 import 'utility/CustomTheme.dart';
 import 'view/choose/main.dart';
+import 'view/credits/main.dart';
 import 'view/home/main.dart';
 import 'view/intro/main.dart';
 import 'view/myPets/main.dart';
 import 'view/timer/main.dart';
+import 'view/tutorial/main.dart';
 import 'view/router/main.dart';
 
 void main() async {
@@ -44,10 +46,12 @@ class MyApp extends StatelessWidget {
           supportedLocales: translator.locals(),
           routes: {
             '/choose': (BuildContext context) => Choose(),
+            '/credits': (BuildContext context) => Credits(),
             '/intro': (BuildContext context) => Intro(),
             '/home': (BuildContext context) => Home(),
             '/myPets': (BuildContext context) => MyPets(),
             '/timer': (BuildContext context) => Timer(),
+            '/tutorial': (BuildContext context) => Tutorial(),
           },
           title: 'PetUrBrain',
           theme: CustomTheme.light,

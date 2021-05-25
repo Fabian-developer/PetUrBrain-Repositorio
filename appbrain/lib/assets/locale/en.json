@@ -1,14 +1,19 @@
 {
     "choose01": "Choose this!",
+    "credits01": "Thank you for using our app\nOur thanks to all the dev team",
     "home01": "My Pets",
     "home02": "Add new pets",
     "home03": "Evolve your pet!",
     "home04": "Start study time",
+    "home05": "Tutorial",
+    "home06": "Credits",
     "intro01": "You need to choose your pet!",
     "intro02": "Select this one!",
     "locale": "Choose your language",
+    "maxLevel": "Congrats! Your pet reached max level!",
     "myPets01": "Select this one",
     "myPets02": "My Pets",
     "timer01": "Study time",
-    "timer02": "Start/Stop the rain sound"
+    "timer02": "Start/Stop the rain sound",
+    "tutorial01": "Some cool tutorial text"
 }

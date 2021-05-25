@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.elliptical(100, 50)),
+                  borderRadius: BorderRadius.circular(4),
                 ),
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 padding: EdgeInsets.all(8),
@@ -80,6 +80,38 @@ class Home extends StatelessWidget {
                   Navigator.pushNamed(context, '/choose');
                 },
               ),
+              TextButton(
+                child: Row(
+                  children: [
+                    Text(
+                      translator.translate('home05'),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primaryVariant,
+                      ),
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/tutorial');
+                },
+              ),
+              TextButton(
+                child: Row(
+                  children: [
+                    Text(
+                      translator.translate('home06'),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primaryVariant,
+                      ),
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/credits');
+                },
+              ),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -121,11 +153,16 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                translator.translate('home03'),
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Theme.of(context).colorScheme.primaryVariant,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  translator
+                      .translate(bloc.getLevel() == 5 ? 'maxLevel' : 'home03'),
+                  style: TextStyle(
+                    fontSize: 28,
+                    color: Theme.of(context).colorScheme.primaryVariant,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
               Image.network(
@@ -133,50 +170,46 @@ class Home extends StatelessWidget {
                 height: 400,
                 width: 550,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 15,
-                  vertical: 10,
-                ),
-                child: bloc.getLevel() == 5
-                    ? Text('Parabéns! Seu pet chegou ao nível final!')
-                    : Row(
-                        children: [
-                          Text(
-                            'Lv ' +
-                                (bloc.getLevel() +
-                                        (bloc.getCValue() >= bloc.getMaxValue()
-                                            ? 1
-                                            : 0) +
-                                        1)
-                                    .toString(),
-                            style: TextStyle(
-                              fontSize: 22,
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryVariant,
-                            ),
-                          ),
-                          const SizedBox(width: 20),
-                          Expanded(
-                            child: SizedBox(
-                              height: 25,
-                              child: FAProgressBar(
-                                animatedDuration: Duration(milliseconds: 500),
-                                borderRadius: BorderRadius.circular(5),
-                                currentValue: bloc.getCValue(),
-                                maxValue: bloc.getMaxValue(),
-                                progressColor: Theme.of(context)
-                                    .colorScheme
-                                    .secondaryVariant,
-                                backgroundColor:
-                                    Theme.of(context).colorScheme.secondary,
-                              ),
-                            ),
-                          ),
-                        ],
+              if (bloc.getLevel() < 5)
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 15,
+                    vertical: 10,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Lv ' +
+                            (bloc.getLevel() +
+                                    (bloc.getCValue() >= bloc.getMaxValue()
+                                        ? 1
+                                        : 0) +
+                                    1)
+                                .toString(),
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Theme.of(context).colorScheme.secondaryVariant,
+                        ),
                       ),
-              ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: SizedBox(
+                          height: 25,
+                          child: FAProgressBar(
+                            animatedDuration: Duration(milliseconds: 500),
+                            borderRadius: BorderRadius.circular(5),
+                            currentValue: bloc.getCValue(),
+                            maxValue: bloc.getMaxValue(),
+                            progressColor:
+                                Theme.of(context).colorScheme.secondaryVariant,
+                            backgroundColor:
+                                Theme.of(context).colorScheme.secondary,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Theme.of(context).colorScheme.error,
