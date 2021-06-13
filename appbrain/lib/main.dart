@@ -64,3 +64,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*
+  Leo, já pensamos como serão os anúncios:
+  um pequeno anúncio estático na parte de baixo das telas (tela do pet e tela do timer),
+  no visor dos petcoins colocar um botão com ícone de +,
+  o usuário ao clicar é convidado a assistir uma propaganda de 30 seg
+  em troca de uma quantidade x de petcoins,
+  criar um meio do timer não voltar do zero ao clicar no anúncio (anúncio da tela do timer)
+*/
