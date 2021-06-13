@@ -1,5 +1,6 @@
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:peturbrain/bloc/Home.dart';
+import 'package:peturbrain/component/Ad.dart';
 import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
@@ -14,29 +15,40 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           actions: [
             Center(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                padding: EdgeInsets.all(8),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'lib/assets/petcoin.png',
-                      height: 20,
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      cUser.petCoins.toString(),
-                      style: TextStyle(
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/reward');
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.all(8),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.add,
                         color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
+                        size: 18,
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 5),
+                      Image.asset(
+                        'lib/assets/petcoin.png',
+                        height: 20,
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        cUser.petCoins.toString(),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -151,10 +163,12 @@ class Home extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
                 child: Text(
                   translator
                       .translate(bloc.getLevel() == 5 ? 'maxLevel' : 'home03'),
@@ -165,10 +179,11 @@ class Home extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              Image.network(
-                bloc.getImage(),
-                height: 400,
-                width: 550,
+              Expanded(
+                child: Image.network(
+                  bloc.getImage(),
+                  fit: BoxFit.contain,
+                ),
               ),
               if (bloc.getLevel() < 5)
                 Padding(
@@ -220,6 +235,7 @@ class Home extends StatelessWidget {
                 ),
                 onPressed: () => Navigator.pushNamed(context, '/timer'),
               ),
+              Ad(),
             ],
           ),
         ),

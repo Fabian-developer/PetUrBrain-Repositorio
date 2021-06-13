@@ -7,6 +7,7 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:one_context/one_context.dart';
 
 import 'bloc/Home.dart';
+import 'component/RewardAd.dart';
 import 'utility/CustomTheme.dart';
 import 'view/choose/main.dart';
 import 'view/credits/main.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
             '/intro': (BuildContext context) => Intro(),
             '/home': (BuildContext context) => Home(),
             '/myPets': (BuildContext context) => MyPets(),
+            '/reward': (BuildContext context) => RewardAd(),
             '/timer': (BuildContext context) => Timer(),
             '/tutorial': (BuildContext context) => Tutorial(),
           },
@@ -64,12 +66,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-/*
-  Leo, já pensamos como serão os anúncios:
-  um pequeno anúncio estático na parte de baixo das telas (tela do pet e tela do timer),
-  no visor dos petcoins colocar um botão com ícone de +,
-  o usuário ao clicar é convidado a assistir uma propaganda de 30 seg
-  em troca de uma quantidade x de petcoins,
-  criar um meio do timer não voltar do zero ao clicar no anúncio (anúncio da tela do timer)
-*/
