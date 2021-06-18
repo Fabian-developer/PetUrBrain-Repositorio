@@ -4,7 +4,7 @@ class Colored {
   static const Color
       // GROUP01 - NULL
       group01Light = Color(0xFFE1BEE7),
-      group01Medium = Colors.purple,
+      group01Medium = Color(0xFF772CE8),
       group01Dark = Color(0xFF000000),
       // GROUP02 - NULL
       group02Light = Color(0xFFFFCC80),
@@ -27,7 +27,7 @@ class Colored {
       greenDark = Colors.green,
       // PRIMARY
       black = Color(0xFF000000),
-      backGroundLight = Color(0xFFFFFFFF),
+      backGroundLight = Color(0xFFF6F6F6),
       backGroundDark = Color(0xFF000000),
-      white = Color(0xFFFFFFFF);
+      white = Color(0xFFF6F6F6);
 }

@@ -7,7 +7,7 @@ import 'package:peturbrain/component/Ad.dart';
 import '../../utility/Pointer.dart';
 
 // In seconds
-const int TIMER_DURATION = 200;
+const int TIMER_DURATION = 30;
 
 const String RAIN_URL = 'https://www.soundjay.com/nature/rain-01.mp3';
 

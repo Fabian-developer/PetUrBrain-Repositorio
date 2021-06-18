@@ -34,11 +34,11 @@ class _RewardAdState extends State<RewardAd> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Theme.of(context).accentColor,
       child: Center(
         child: CircularProgressIndicator(
           valueColor: AlwaysStoppedAnimation<Color>(
-            Colors.purple,
+            Theme.of(context).colorScheme.primaryVariant,
           ),
         ),
       ),
