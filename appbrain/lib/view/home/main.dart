@@ -28,12 +28,6 @@ class Home extends StatelessWidget {
                   padding: EdgeInsets.all(8),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.add,
-                        color: Colors.black,
-                        size: 18,
-                      ),
-                      const SizedBox(width: 5),
                       Image.asset(
                         'lib/assets/petcoin.png',
                         height: 20,
@@ -46,6 +40,12 @@ class Home extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                         ),
+                      ),
+                      const SizedBox(width: 5),
+                      Icon(
+                        Icons.add,
+                        color: Colors.black,
+                        size: 18,
                       ),
                     ],
                   ),
@@ -63,11 +63,17 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(
-                      translator.translate('home01'),
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primaryVariant,
+                    Expanded(
+                      child: Text(
+                        translator.translate('home01'),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primaryVariant,
+                        ),
                       ),
+                    ),
+                    Icon(
+                      Icons.pets,
+                      color: Theme.of(context).colorScheme.primaryVariant,
                     ),
                   ],
                 ),
@@ -79,11 +85,17 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(
-                      translator.translate('home02'),
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primaryVariant,
+                    Expanded(
+                      child: Text(
+                        translator.translate('home02'),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primaryVariant,
+                        ),
                       ),
+                    ),
+                    Icon(
+                      Icons.add_circle,
+                      color: Theme.of(context).colorScheme.primaryVariant,
                     ),
                   ],
                 ),
@@ -95,11 +107,17 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(
-                      translator.translate('home05'),
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primaryVariant,
+                    Expanded(
+                      child: Text(
+                        translator.translate('home05'),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primaryVariant,
+                        ),
                       ),
+                    ),
+                    Icon(
+                      Icons.help,
+                      color: Theme.of(context).colorScheme.primaryVariant,
                     ),
                   ],
                 ),
@@ -111,11 +129,17 @@ class Home extends StatelessWidget {
               TextButton(
                 child: Row(
                   children: [
-                    Text(
-                      translator.translate('home06'),
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primaryVariant,
+                    Expanded(
+                      child: Text(
+                        translator.translate('home06'),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primaryVariant,
+                        ),
                       ),
+                    ),
+                    Icon(
+                      Icons.assignment_ind_rounded,
+                      color: Theme.of(context).colorScheme.primaryVariant,
                     ),
                   ],
                 ),
