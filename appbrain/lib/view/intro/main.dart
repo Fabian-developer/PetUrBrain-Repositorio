@@ -21,7 +21,7 @@ class Intro extends StatelessWidget {
                 ),
               ),
               Image.network(
-                'https://st4.depositphotos.com/11953928/40150/v/1600/depositphotos_401502362-stock-illustration-pet-shop-cute-little-puppies.jpg',
+                'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/imagem_abertura.jpeg?alt=media&token=125c3cac-9b39-4d96-8532-cbe3f9e83b77',
               ),
               Container(
                 height: 50,
