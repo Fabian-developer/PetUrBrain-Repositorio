@@ -30,13 +30,31 @@ class Cards extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Theme.of(context).colorScheme.primaryVariant,
+              primary: Theme.of(context).accentColor,
+              elevation: 0,
+              side: BorderSide(
+                color: Theme.of(context).colorScheme.primaryVariant,
+                width: 2,
+              ),
             ),
-            child: Text(
-              cUser.animals.length > 0
-                  ? animal.cost.toString()
-                  : translator.translate('choose01'),
-              style: TextStyle(color: Theme.of(context).accentColor),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  'lib/assets/petcoin.png',
+                  height: 22,
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  cUser.animals.length > 0
+                      ? animal.cost.toString()
+                      : translator.translate('choose01'),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primaryVariant,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
             ),
             onPressed: () {
               bloc.addAnimal(bloc.animals.indexOf(animal));

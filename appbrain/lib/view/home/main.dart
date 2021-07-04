@@ -43,9 +43,9 @@ class Home extends StatelessWidget {
                       ),
                       const SizedBox(width: 5),
                       Icon(
-                        Icons.add,
-                        color: Colors.black,
-                        size: 18,
+                        Icons.add_circle,
+                        color: Theme.of(context).colorScheme.primaryVariant,
+                        size: 22,
                       ),
                     ],
                   ),

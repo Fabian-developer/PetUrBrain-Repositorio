@@ -20,8 +20,8 @@ class Intro extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primaryVariant,
                 ),
               ),
-              Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/imagem_abertura.jpeg?alt=media&token=125c3cac-9b39-4d96-8532-cbe3f9e83b77',
+              Image.asset(
+                'lib/assets/intro.jpeg',
               ),
               Container(
                 height: 50,
