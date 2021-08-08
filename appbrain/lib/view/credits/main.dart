@@ -31,7 +31,7 @@ class Credits extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Fabian - texto descritivo',
+                    '',
                     style: TextStyle(
                       fontSize: 16,
                     ),
@@ -43,7 +43,7 @@ class Credits extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Leonardo - texto descritivo',
+                    '',
                     style: TextStyle(
                       fontSize: 16,
                     ),
@@ -55,7 +55,7 @@ class Credits extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Vinícius - texto descritivo',
+                    '',
                     style: TextStyle(
                       fontSize: 16,
                     ),

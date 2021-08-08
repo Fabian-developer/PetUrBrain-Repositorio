@@ -1,6 +1,6 @@
 {
     "choose01": "Escolher esse!",
-    "credits01": "Muito obrigado por usar nosso app\nNosso agradecimento a toda a equipe que participou do desenvolviemnto\n",
+    "credits01": "Muito obrigado por usar nosso app!\nNosso agradecimento a toda a equipe que participou do desenvolvimento!\n\n\n** Idealizador **\nVinícius Salem\n\n** Projeto **\nFabian F. Lino\nVinícius Salem\n\n** Coordenação **\nFabian F. Lino\n\n** Programação **\nLeonardo Renaut\nFabian F. Lino\n\n** Direção de arte **\nEduarda Alves\n\n** Tradução **\nVinícius Salem",
     "home01": "Meus Pets",
     "home02": "Adicionar pets",
     "home03": "Faça seu Pet evoluir!",
@@ -15,5 +15,5 @@
     "myPets02": "Meus Pets",
     "timer01": "Hora de estudos",
     "timer02": "Iniciar/Parar som da chuva",
-    "tutorial01": "Some cool tutorial text"
+    "tutorial01": "1 - Após selecionar o seu pet você pode começar suas horas de estudo.\n\n2 - Ao terminar sua hora de estudo a barra de progressão de seu pet irá aumentar e você irá receber uma quantia de PetCoins, que podem ser utilizados para a compra de novos pets no menu.\n\n3 - Para aumentar seus PetCoins você pode assistir um anúncio premiado, basta clicar no botão + , localizado ao lado do seu visor de PetCoins.\n\n4 - A cada barra de progressão completada seu pet subirá de nível, até que os 5 níveis sejam alcançados.\n\n5 - Bons estudos!\n\n"
 }
