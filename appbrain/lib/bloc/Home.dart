@@ -35,6 +35,7 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Doggo%205%20(tamanho%20reduzido).png?alt=media&token=5fede1cd-4cef-441a-87fd-0e4ee6d76cc2',
       ],
       points: 0,
+      cost: 100,
     ),
     ModelAnimal(
       id: 'a2',
@@ -49,6 +50,7 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Panda%205%20(tamanho%20reduzido).png?alt=media&token=0b1713e8-b99d-4d20-83d1-8dcba1a0cb75',
       ],
       points: 0,
+      cost: 150,
     ),
     ModelAnimal(
       id: 'a3',
@@ -63,6 +65,7 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Gato%205%20(tamanho%20reduzido).png?alt=media&token=e116b42b-e340-46e6-8924-7753ad6f97ba',
       ],
       points: 0,
+      cost: 100,
     ),
     ModelAnimal(
       id: 'a4',
@@ -77,6 +80,7 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%205%20(tamanho%20reduzido).png?alt=media&token=cd8dbe60-d7b7-4cbb-b521-2e7598fd457as',
       ],
       points: 0,
+      cost: 140,
     ),
     ModelAnimal(
       id: 'a5',
@@ -91,21 +95,22 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Fur%C3%A3o%205%20(tamanho%20reduzido).png?alt=media&token=fa8827aa-cd52-4405-9e96-a9c5a3c8271c',
       ],
       points: 0,
+      cost: 130,
     ),
     ModelAnimal(
-      id: 'a6',
-      nome: 'Coruja',
-      saude: 90,
-      estado: 'bem',
-      images: [
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%201%20(tamanho%20reduzido).png?alt=media&token=64e52da4-c584-4302-8c21-6dfc160e12a6',
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%202%20(tamanho%20reduzido).png?alt=media&token=4f43ea40-6895-4ebf-841b-a10ec8ae2d07',
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%203%20(tamanho%20reduzido).png?alt=media&token=3550c042-e8d0-4cf9-8475-28aa7afa9f3b',
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%204%20(tamanho%20reduzido).png?alt=media&token=e5c563c2-5ffd-4059-8df2-c918b13efa0b',
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%205%20(tamanho%20reduzido).png?alt=media&token=8563e953-b90b-4296-87f2-cdea4e85f8d7',
-      ],
-      points: 0,
-    ),
+        id: 'a6',
+        nome: 'Coruja',
+        saude: 90,
+        estado: 'bem',
+        images: [
+          'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%201%20(tamanho%20reduzido).png?alt=media&token=64e52da4-c584-4302-8c21-6dfc160e12a6',
+          'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%202%20(tamanho%20reduzido).png?alt=media&token=4f43ea40-6895-4ebf-841b-a10ec8ae2d07',
+          'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%203%20(tamanho%20reduzido).png?alt=media&token=3550c042-e8d0-4cf9-8475-28aa7afa9f3b',
+          'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%204%20(tamanho%20reduzido).png?alt=media&token=e5c563c2-5ffd-4059-8df2-c918b13efa0b',
+          'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Coruja%205%20(tamanho%20reduzido).png?alt=media&token=8563e953-b90b-4296-87f2-cdea4e85f8d7',
+        ],
+        points: 0,
+        cost: 160),
     ModelAnimal(
       id: 'a7',
       nome: 'Dino',
@@ -119,13 +124,13 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Dino%205%20(tamanho%20reduzido).png?alt=media&token=6a1d893c-5595-4588-97ff-36fdeca9fae2',
       ],
       points: 0,
+      cost: 180,
     ),
   ];
 
   int cAnimal = 0;
 
   bool addAnimal(int value) {
-    print(animals[value].cost);
     if (cUser.animals.length >= MAX_PETS ||
         (cUser.animals.length > 0 && cUser.petCoins < animals[value].cost))
       return false;
@@ -174,7 +179,10 @@ class BlocHome extends BlocBase {
 
   void setAnimal(int value) {
     if (cAnimal != value) {
-      cAnimal = value;
+      ModelAnimal aux = cUser.animals[0];
+      cUser.animals[0] = cUser.animals[value];
+      cUser.animals[value] = aux;
+      cUser.sync();
       notifyListeners();
     }
   }

@@ -23,7 +23,7 @@ void main() async {
 
   await translator.init(
     localeDefault: LocalizationDefaultType.device,
-    languagesList: ['en', 'pt'],
+    languagesList: ['en', 'pt', 'es'],
     assetsDirectory: 'lib/assets/locale/',
   );
 
