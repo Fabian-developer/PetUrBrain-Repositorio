@@ -31,16 +31,16 @@ class ModelUser {
 
     animals.add(animal);
 
-    _sync();
+    sync();
   }
 
   void addAnimalPoints(int index, int points, int coins) {
     petCoins += coins;
     animals[index].points += points;
-    _sync();
+    sync();
   }
 
-  void _sync() {
+  void sync() {
     FunctionCache.saveUser(this);
   }
 

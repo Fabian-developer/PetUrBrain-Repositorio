@@ -7,9 +7,10 @@ import 'package:peturbrain/component/Ad.dart';
 import '../../utility/Pointer.dart';
 
 // In seconds
-const int TIMER_DURATION = 30;
+const int TIMER_DURATION = 3600;
 
-const String RAIN_URL = 'https://www.soundjay.com/nature/rain-01.mp3';
+const String RAIN_URL =
+    'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Rain%20On%20Rooftop.mp3?alt=media&token=670903c7-bce6-49d8-b2d5-8f1fbc36cd52';
 
 class Timer extends StatefulWidget {
   @override
