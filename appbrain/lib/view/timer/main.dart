@@ -33,6 +33,7 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
     );
     super.initState();
     player.setUrl(RAIN_URL);
+    player.setLoopMode(LoopMode.all);
   }
 
   @override
