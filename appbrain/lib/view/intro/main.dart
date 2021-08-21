@@ -13,11 +13,15 @@ class Intro extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                translator.translate('intro01'),
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Theme.of(context).colorScheme.primaryVariant,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  translator.translate('intro01'),
+                  style: TextStyle(
+                    fontSize: 28,
+                    color: Theme.of(context).colorScheme.primaryVariant,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
               Image.asset(
