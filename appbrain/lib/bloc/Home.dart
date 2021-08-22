@@ -24,7 +24,7 @@ class BlocHome extends BlocBase {
   List<ModelAnimal> animals = [
     ModelAnimal(
       id: 'a1',
-      nome: 'Cachorro',
+      nome: 'Charlie',
       saude: 90,
       estado: 'bem',
       images: [
@@ -39,7 +39,7 @@ class BlocHome extends BlocBase {
     ),
     ModelAnimal(
       id: 'a2',
-      nome: 'Panda',
+      nome: 'Andy',
       saude: 90,
       estado: 'bem',
       images: [
@@ -54,7 +54,7 @@ class BlocHome extends BlocBase {
     ),
     ModelAnimal(
       id: 'a3',
-      nome: 'Gato',
+      nome: 'Lilo',
       saude: 90,
       estado: 'bem',
       images: [
@@ -69,7 +69,7 @@ class BlocHome extends BlocBase {
     ),
     ModelAnimal(
       id: 'a4',
-      nome: 'Hamster',
+      nome: 'Dobby',
       saude: 90,
       estado: 'bem',
       images: [
@@ -84,7 +84,7 @@ class BlocHome extends BlocBase {
     ),
     ModelAnimal(
       id: 'a5',
-      nome: 'Furão',
+      nome: 'Zippy',
       saude: 90,
       estado: 'bem',
       images: [
@@ -99,7 +99,7 @@ class BlocHome extends BlocBase {
     ),
     ModelAnimal(
         id: 'a6',
-        nome: 'Coruja',
+        nome: 'Edwiggy',
         saude: 90,
         estado: 'bem',
         images: [
@@ -113,7 +113,7 @@ class BlocHome extends BlocBase {
         cost: 160),
     ModelAnimal(
       id: 'a7',
-      nome: 'Dino',
+      nome: 'Bingo',
       saude: 90,
       estado: 'bem',
       images: [

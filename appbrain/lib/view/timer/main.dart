@@ -7,7 +7,7 @@ import 'package:peturbrain/component/Ad.dart';
 import '../../utility/Pointer.dart';
 
 // In seconds
-const int TIMER_DURATION = 3600;
+const int TIMER_DURATION = 7;
 
 const String RAIN_URL =
     'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Rain%20On%20Rooftop.mp3?alt=media&token=670903c7-bce6-49d8-b2d5-8f1fbc36cd52';
@@ -114,7 +114,7 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
                 borderRadius: BorderRadius.circular(8),
               ),
               height: 50,
-              width: MediaQuery.of(context).size.width * .5,
+              width: MediaQuery.of(context).size.width * .7,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
