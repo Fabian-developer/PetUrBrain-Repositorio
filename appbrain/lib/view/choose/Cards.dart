@@ -46,7 +46,7 @@ class Cards extends StatelessWidget {
                 ),
                 const SizedBox(width: 10),
                 Text(
-                  cUser.animals.length > 0
+                  blocHome.cUser.animals.length > 0
                       ? animal.cost.toString()
                       : translator.translate('choose01'),
                   style: TextStyle(

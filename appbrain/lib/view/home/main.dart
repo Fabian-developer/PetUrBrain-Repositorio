@@ -1,7 +1,6 @@
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:peturbrain/bloc/Home.dart';
 import 'package:peturbrain/component/Ad.dart';
-import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
@@ -34,7 +33,7 @@ class Home extends StatelessWidget {
                       ),
                       const SizedBox(width: 10),
                       Text(
-                        cUser.petCoins.toString(),
+                        bloc.cUser.petCoins.toString(),
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 16,

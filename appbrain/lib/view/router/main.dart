@@ -53,9 +53,9 @@ class _RouterState extends State<Router> {
     String _user = await FunctionCache.getUser();
 
     if (_user == null)
-      cUser = ModelUser();
+      blocHome.cUser = ModelUser();
     else
-      cUser = ModelUser.fromJson(json.decode(_user));
+      blocHome.cUser = ModelUser.fromJson(json.decode(_user));
 
     Navigator.pushNamed(context, navigator);
   }

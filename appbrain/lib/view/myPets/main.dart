@@ -22,7 +22,7 @@ class MyPets extends StatelessWidget {
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
           children: List.generate(
-            cUser.animals.length,
+            blocHome.cUser.animals.length,
             (index) => ListCard(bloc, index),
           ),
         ),

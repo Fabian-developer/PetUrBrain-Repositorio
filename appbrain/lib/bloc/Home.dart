@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import 'package:peturbrain/utility/Pointer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../model/Animal.dart';
+import '../model/User.dart';
 
 const int
     //
@@ -128,6 +128,8 @@ class BlocHome extends BlocBase {
     ),
   ];
 
+  ModelUser cUser;
+
   int cAnimal = 0;
 
   bool addAnimal(int value) {
@@ -139,7 +141,7 @@ class BlocHome extends BlocBase {
 
     cUser.addAnimal(animals[value]);
 
-    cAnimal = cUser.animals.indexOf(animals[value]);
+    setAnimal(cUser.animals.indexOf(animals[value]));
     notifyListeners();
 
     return true;
@@ -147,8 +149,10 @@ class BlocHome extends BlocBase {
 
   void addPoints({
     int value = POINTS_TIMER,
-  }) {
+  }) async {
     cUser.addAnimalPoints(cAnimal, value, PETCOINS_TIMER);
+    notifyListeners();
+    await Future.delayed(Duration(milliseconds: 300));
     notifyListeners();
   }
 
