@@ -1,10 +1,10 @@
-import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:peturbrain/bloc/Home.dart';
 import 'package:peturbrain/component/Ad.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:restart_app/restart_app.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -168,15 +168,15 @@ class Home extends StatelessWidget {
                       value: translator.locals().toList()[index].languageCode,
                     ),
                   ),
-                  onChanged: (value) {
-                    translator.setNewLanguage(
+                  onChanged: (value) async {
+                    await translator.setNewLanguage(
                       context,
                       newLanguage: value,
                       remember: true,
                       restart: true,
                     );
                     Navigator.pop(context);
-                    Phoenix.rebirth(context);
+                    Restart.restartApp();
                   },
                   value: translator.locale.languageCode,
                 ),
