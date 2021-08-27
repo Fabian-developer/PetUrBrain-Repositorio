@@ -41,7 +41,7 @@ class ListCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    translator.translate('myPets01'),
+                    'myPets01'.tr(),
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primaryVariant,
                     ),

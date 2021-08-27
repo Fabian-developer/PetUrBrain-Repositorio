@@ -6,7 +6,7 @@ class Credits extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(translator.translate('home06')),
+        title: Text('home06'.tr()),
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
@@ -16,7 +16,7 @@ class Credits extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    translator.translate('credits01'),
+                    'credits01'.tr(),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,

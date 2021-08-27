@@ -13,7 +13,7 @@ class MyPets extends StatelessWidget {
     return Consumer<BlocHome>(builder: (context, bloc) {
       return Scaffold(
         appBar: AppBar(
-          title: Text(translator.translate('myPets02')),
+          title: Text('myPets02'.tr()),
         ),
         body: GridView.count(
           crossAxisCount: 2,

@@ -23,17 +23,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  bloc_pattern: ^2.5.1
+  bloc_pattern: ^3.0.0
   circular_countdown_timer: ^0.2.0
-  cupertino_icons: ^1.0.2
-  firebase_core: ^1.0.2
-  firebase_remote_config: ^0.9.0-dev.2
-  flutter_animation_progress_bar: ^2.0.0
-  google_mobile_ads: ^0.13.0
-  just_audio: ^0.7.2
-  localize_and_translate: ^4.0.1
-  one_context: ^1.0.0
-  path_provider: ^2.0.1
+  cupertino_icons: ^1.0.3
+  firebase_core: ^1.6.0
+  firebase_remote_config: ^0.10.0+5
+  flutter_animation_progress_bar: ^2.0.1
+  google_mobile_ads: ^0.13.4
+  just_audio: ^0.9.7
+  localize_and_translate: ^4.1.1
+  one_context: ^1.1.1
+  path_provider: ^2.0.2
   restart_app: ^1.0.3
 
 dev_dependencies:

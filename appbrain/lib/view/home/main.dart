@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        translator.translate('home01'),
+                        'home01'.tr(),
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primaryVariant,
                         ),
@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        translator.translate('home02'),
+                        'home02'.tr(),
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primaryVariant,
                         ),
@@ -108,7 +108,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        translator.translate('home05'),
+                        'home05'.tr(),
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primaryVariant,
                         ),
@@ -130,7 +130,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        translator.translate('home06'),
+                        'home06'.tr(),
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primaryVariant,
                         ),
@@ -151,7 +151,7 @@ class Home extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
-                  translator.translate('locale'),
+                  'locale'.tr(),
                 ),
               ),
               Padding(
@@ -178,7 +178,7 @@ class Home extends StatelessWidget {
                     Navigator.pop(context);
                     Restart.restartApp();
                   },
-                  value: translator.locale.languageCode,
+                  value: translator.activeLocale.languageCode,
                 ),
               ),
             ],
@@ -193,8 +193,7 @@ class Home extends StatelessWidget {
                   vertical: 10,
                 ),
                 child: Text(
-                  translator
-                      .translate(bloc.getLevel() == 5 ? 'maxLevel' : 'home03'),
+                  (bloc.getLevel() == 5 ? 'maxLevel' : 'home03').tr(),
                   style: TextStyle(
                     fontSize: 28,
                     color: Theme.of(context).colorScheme.primaryVariant,
@@ -253,7 +252,7 @@ class Home extends StatelessWidget {
                   primary: Theme.of(context).colorScheme.error,
                 ),
                 child: Text(
-                  translator.translate('home04'),
+                  'home04'.tr(),
                   style: TextStyle(color: Theme.of(context).accentColor),
                 ),
                 onPressed: () => Navigator.pushNamed(context, '/timer'),

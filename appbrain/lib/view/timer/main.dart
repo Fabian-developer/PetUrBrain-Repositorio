@@ -47,7 +47,7 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(translator.translate('timer01')),
+        title: Text('timer01'.tr()),
       ),
       body: Column(
         children: [
@@ -119,7 +119,7 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    translator.translate('timer02'),
+                    'timer02'.tr(),
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primaryVariant,
                     ),

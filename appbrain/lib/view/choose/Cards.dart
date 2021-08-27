@@ -48,7 +48,7 @@ class Cards extends StatelessWidget {
                 Text(
                   blocHome.cUser.animals.length > 0
                       ? animal.cost.toString()
-                      : translator.translate('choose01'),
+                      : 'choose01'.tr(),
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.primaryVariant,
                     fontSize: 16,

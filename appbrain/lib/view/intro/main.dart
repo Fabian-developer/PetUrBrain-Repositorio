@@ -16,7 +16,7 @@ class Intro extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  translator.translate('intro01'),
+                  'intro01'.tr(),
                   style: TextStyle(
                     fontSize: 28,
                     color: Theme.of(context).colorScheme.primaryVariant,
@@ -41,7 +41,7 @@ class Intro extends StatelessWidget {
                     );
                   },
                   child: Text(
-                    translator.translate('intro02'),
+                    'intro02'.tr(),
                     style: TextStyle(
                       fontSize: 20,
                       color: Theme.of(context).accentColor,

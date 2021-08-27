@@ -6,12 +6,12 @@ class Tutorial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(translator.translate('home05')),
+        title: Text('home05'.tr()),
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Text(
-          translator.translate('tutorial01'),
+          'tutorial01'.tr(),
         ),
       ),
     );

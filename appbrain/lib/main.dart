@@ -21,9 +21,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await translator.init(
-    localeDefault: LocalizationDefaultType.device,
-    languagesList: ['en', 'pt', 'es'],
     assetsDirectory: 'lib/assets/locale/',
+    languagesList: ['en', 'pt', 'es'],
+    localeType: LocalizationDefaultType.device,
   );
 
   await Firebase.initializeApp();
@@ -41,11 +41,12 @@ class MyApp extends StatelessWidget {
         blocs: [
           Bloc<BlocHome>((dynamic i) => BlocHome()),
         ],
+        dependencies: [],
         child: MaterialApp(
           builder: OneContext().builder,
           navigatorKey: OneContext().key,
           localizationsDelegates: translator.delegates,
-          locale: translator.locale,
+          locale: translator.activeLocale,
           supportedLocales: translator.locals(),
           routes: {
             '/choose': (BuildContext context) => Choose(),
