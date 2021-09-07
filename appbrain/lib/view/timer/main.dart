@@ -9,8 +9,12 @@ import '../../utility/Pointer.dart';
 // In seconds
 const int TIMER_DURATION = 7;
 
-const String RAIN_URL =
-    'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Rain%20On%20Rooftop.mp3?alt=media&token=670903c7-bce6-49d8-b2d5-8f1fbc36cd52';
+const String
+//
+    DONE_URL =
+        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/som_conclusao_estudo.mp3?alt=media&token=41d8c7a8-507b-4ef6-8419-96ec0626cc8e',
+    RAIN_URL =
+        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Rain%20On%20Rooftop.mp3?alt=media&token=670903c7-bce6-49d8-b2d5-8f1fbc36cd52';
 
 class Timer extends StatefulWidget {
   @override
@@ -70,7 +74,13 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
                     textStyle:
                         TextStyle(fontSize: 32, fontWeight: FontWeight.w800),
                     width: MediaQuery.of(context).size.width * .7,
-                    onComplete: () {
+                    onComplete: () async {
+                      if (player.playing) player.stop();
+                      player.setUrl(DONE_URL);
+                      var _wait = await player.load();
+                      player.play();
+                      await Future.delayed(_wait + Duration(seconds: 1));
+
                       Navigator.pop(context);
                       blocHome.addPoints();
                     },
