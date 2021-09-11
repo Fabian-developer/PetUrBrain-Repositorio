@@ -13,7 +13,7 @@ class _RewardAdState extends State<RewardAd> {
     super.initState();
 
     RewardedAd.load(
-      adUnitId: 'ca-app-pub-4239593143180743/1593278261',
+      adUnitId: 'ca-app-pub-4239593143180743/6320141080',
       request: AdRequest(),
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (RewardedAd ad) {
