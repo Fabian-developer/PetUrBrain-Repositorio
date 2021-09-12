@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  another_flushbar: ^1.10.24
   bloc_pattern: ^3.0.0
   circular_countdown_timer: ^0.2.0
   cupertino_icons: ^1.0.3

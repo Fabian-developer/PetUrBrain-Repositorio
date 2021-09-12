@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:peturbrain/component/CustomBar.dart';
 import 'package:peturbrain/utility/Pointer.dart';
 
 class RewardAd extends StatefulWidget {
@@ -26,6 +27,7 @@ class _RewardAdState extends State<RewardAd> {
         },
         onAdFailedToLoad: (LoadAdError error) {
           Navigator.pop(context);
+          CustomBar().showAlert('Oops!!', 'Falha ao carregar anúncio');
         },
       ),
     );
