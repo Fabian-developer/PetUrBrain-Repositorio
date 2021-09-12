@@ -77,7 +77,7 @@ class BlocHome extends BlocBase {
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%202%20(tamanho%20reduzido).png?alt=media&token=ad677fb0-9489-4949-bdf4-9a9345d823f9',
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%203%20(tamanho%20reduzido).png?alt=media&token=caf882f9-e064-4d7a-b64f-05a800f93a92',
         'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%204%20(tamanho%20reduzido).png?alt=media&token=bb12cea0-a42d-4fc1-8e65-6ce5383ac5b5',
-        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%205%20(tamanho%20reduzido).png?alt=media&token=cd8dbe60-d7b7-4cbb-b521-2e7598fd457as',
+        'https://firebasestorage.googleapis.com/v0/b/peturbrain.appspot.com/o/Hamster%205%20(tamanho%20reduzido).png?alt=media&token=99112fd3-c31e-4ddb-bc1f-45e6d66a8c3f',
       ],
       points: 0,
       cost: 140,
