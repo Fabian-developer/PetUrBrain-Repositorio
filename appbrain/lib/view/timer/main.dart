@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:peturbrain/component/Ad.dart';
+import 'package:wakelock/wakelock.dart';
 
 import '../../utility/Pointer.dart';
 
@@ -38,11 +39,13 @@ class _TimerState extends State<Timer> with SingleTickerProviderStateMixin {
     super.initState();
     player.setUrl(RAIN_URL);
     player.setLoopMode(LoopMode.all);
+    Wakelock.enable();
   }
 
   @override
   void dispose() {
     if (player.playing) player.stop();
+    Wakelock.disable();
 
     super.dispose();
   }
