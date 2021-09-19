@@ -1,5 +1,5 @@
 {
-    "adError": "Falha ao carregar anúncio",
+    "adError": "Anuncio no disponible",
     "choose01": "Elige ese!",
     "credits01": "¡Muchas gracias por usar nuestra aplicación!\nY nuestro agradecimiento al equipo de desarolladores:\n\n\n** Creador **\nVinícius Salem\n\n** Proyecto **\nFabian F. Lino\nVinícius Salem\n\n** Coordinación **\nFabian F. Lino\n\n** Programación **\nLeonardo Renaut\nFabian F. Lino\n\n** Dirección artística **\nEduarda Alves\n\n** Traducción **\nVinícius Salem",
     "home01": "Mis mascotas",
@@ -14,7 +14,7 @@
     "maxLevel": "¡Muy bien! ¡Tu mascota alcanzó el nivel máximo!",
     "myPets01": "Selecciona este",
     "myPets02": "Mis mascotas",
-    "timer01": "tiempo de estudios",
+    "timer01": "Tiempo de estudios",
     "timer02": "Iniciar / detener el ruido de la lluvia",
     "tutorial01": "1 - Puedes comenzar sus tiempos de estudio después de seleccionar a su mascota.\n\n2 - Al final de tu tiempo de estudio la barra de progresión de tu mascota aumentará y recibirás una cantidad de PetCoins, que puedes usar para comprar nuevas mascotas del menú.\n\n3 - Puedes ver un anuncio para aumentar sus PetCoins! Simplemente haga clic en el botón + , ubicado junto a su visor de PetCoins.\n\n4 - Tu mascota subirá de nivel con cada barra de progreso completada, hasta alcanzar el nivel 5.\n\n5 - ¡Buenos estudios!\n\n"
 }

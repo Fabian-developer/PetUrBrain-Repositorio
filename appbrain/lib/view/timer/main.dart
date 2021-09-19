@@ -7,7 +7,7 @@ import 'package:peturbrain/component/Ad.dart';
 import '../../utility/Pointer.dart';
 
 // In seconds
-const int TIMER_DURATION = 7;
+const int TIMER_DURATION = 1800;
 
 const String
 //
